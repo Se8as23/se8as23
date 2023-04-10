@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi pagina web</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .lyrics-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        text-align: center;
+        color: white;
+      }
+      .lyrics-container h1 {
+        font-size: 4em;
+        margin-bottom: 0.5em;
+      }
+      .lyrics-container p {
+        font-size: 1.5em;
+        line-height: 1.5;
+      }
+      .button-container {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+      }
+      .button-container button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 1em 2em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.5em;
+        margin: 0 1em;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      var audio = new Audio("https://example.com/song.mp3");
+      function playSong() {
+        audio.play();
+      }
+      function pauseSong() {
+        audio.pause();
+      }
+      function changeBackground() {
+        document.body.style.backgroundImage = "url('https://example.com/another-background.jpg')";
+      }
+      function showAlert() {
+        alert("¡Haz clicado en el botón rojo!");
+      }
+      function hideLyrics() {
+        var lyricsContainer = document.querySelector(".lyrics-container");
+        lyricsContainer.style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <video autoplay muted loop>
+      <source src="https://example.com/video.mp4" type="video/mp4">
+      <source src="https://example.com/video.webm" type="video/webm">
+      Tu navegador no soporta video HTML5.
+    </video>
+    <div class="lyrics-container">
+      <h1>Una canción inventada</h1>
+      <p>
+        Había un mundo tan lejano<br>
+        Donde el cielo era verde<br>
+        Y la luna era azul<br>
+        Donde las montañas cantaban<br>
+        Y las flores bailaban<br>
+        Y todo era tan feliz<br>
+      </p>
+    </div>
+    <div class="button-container">
+      <button onclick="playSong()">Play</button>
+      <button onclick="pauseSong()">Pause</button>
+      <button onclick="changeBackground()">Cambiar fondo</button>
+      <button onclick="showAlert()" style="background-color: red;">¡Alerta!</button>
+      <button onclick="hideLyrics()">Ocultar letra</button>
+    </div>
+  </body>
+  </html>
+       
+
