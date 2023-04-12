@@ -1,1 +1,56 @@
+<head>
+<script src="https://cdn.jsdelivr.net/npm/wordcloud2.js@1.0.7/dist/wordcloud2.min.js"></script>
+</head>
 
+<div id="wordcloud"></div>
+<script>
+var words = [
+  { text: "Lorem", weight: 13 },
+  { text: "ipsum", weight: 10.5 },
+  { text: "dolor", weight: 9.4 },
+  { text: "sit", weight: 8 },
+  { text: "amet", weight: 6.2 },
+  { text: "consectetur", weight: 5 },
+  { text: "adipiscing", weight: 5 },
+  { text: "elit", weight: 5 },
+  { text: "sed", weight: 5 },
+  { text: "eiusmod", weight: 4 },
+  { text: "tempor", weight: 4 },
+  { text: "incididunt", weight: 4 },
+  { text: "ut", weight: 3 },
+  { text: "labore", weight: 3 },
+  { text: "et", weight: 3 },
+  { text: "dolore", weight: 3 },
+  { text: "magna", weight: 2 },
+  { text: "aliqua", weight: 2 },
+  { text: "enim", weight: 2 },
+  { text: "minim", weight: 2 },
+  { text: "veniam", weight: 2 },
+  { text: "quis", weight: 2 },
+  { text: "nostrud", weight: 2 },
+  { text: "exercitation", weight: 1 },
+  { text: "ullamco", weight: 1 },
+  { text: "laboris", weight: 1 },
+  { text: "nisi", weight: 1 }
+];
+
+wordcloud2(document.getElementById('wordcloud'), {
+  list: words,
+  fontFamily: 'Arial, sans-serif',
+  color: 'random-dark',
+  backgroundColor: '#f8f8f8',
+  rotateRatio: 0.5,
+  rotationSteps: 2,
+  shuffle: true,
+  shape: 'circle',
+  ellipticity: 0.65,
+  gridSize: 8,
+  weightFactor: 1,
+  minSize: 10,
+  maxFontSize: 50,
+  hover: window.drawBox,
+  click: function(item) {
+    alert('Word "' + item.text + '" with weight ' + item.weight);
+  }
+});
+</script>
