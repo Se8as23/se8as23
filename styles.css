@@ -19,3 +19,21 @@ h1{
 img{
   image-orientation: flip;
 }
+
+table, th, td{
+  border: 1px solid violet;
+  color: blue;
+}
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+tr:nth-child(odd){
+  background-color: lightblue;
+}
+tr:nth-child(even){
+  background-color: lightpink;
+}
+img{
+  text-align: center;
+}
