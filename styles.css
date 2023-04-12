@@ -36,4 +36,5 @@ tr:nth-child(even){
 }
 img{
   text-align: center;
+  border-image-repeat: round;
 }
